@@ -1,6 +1,8 @@
-import logging
-import sys
+from src.logger import logging
 from functools import wraps
+import sys
+
+
 
 class CustomException(Exception):
     def __init__(self, error_message: str, error_detail: sys):
