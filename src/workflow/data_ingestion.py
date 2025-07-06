@@ -43,11 +43,7 @@ class DataIngestion:
         
         return self.config.train_data_file, self.config.test_data_file
         
-if __name__ == "__main__":
-    
-    config = DataIngestionConfig()
-    data_ingestion = DataIngestion(config)
-    train_file, test_file = data_ingestion.get_data()
+
    
 
         
