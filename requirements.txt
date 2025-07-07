@@ -1,9 +1,12 @@
 pandas
 numpy
 scikit-learn
-matplotlib
-seaborn
 mlflow
-
+catboost
+xgboost
+fastapi
+uvicorn
+joblib
+dotenv
 
 

@@ -11,6 +11,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
 import joblib
 import numpy as np
+import mlflow
 
 
 @dataclass
@@ -69,7 +70,14 @@ class DataTransformation:
         
         X_train_transformed = preprocessor.fit_transform(X_train)
         X_test_transformed = preprocessor.transform(X_test)
+
+        mlflow.set_tracking_uri("http://127.0.0.1:5000")
         
+        mlflow.set_experiment("processor")
+
+        with mlflow.start_run():
+            mlflow.log_artifact(self.config.preprocessor_file_path, artifact_path="preprocessor")
+
         logging.info("Data transformation completed successfully.")
         
         train_arr = np.c_[X_train_transformed, y_train.values]
@@ -84,7 +92,7 @@ class DataTransformation:
         
         logging.info("Data transformation process completed.")
         
-        return train_arr, test_arr, self.config.preprocessor_file_path
+        return train_arr, test_arr
         
           
 

@@ -8,7 +8,7 @@ import os
 from sklearn.model_selection import train_test_split
 import pandas as pd
 
-from src.workflow.data_transformation import DataTransformationConfig, DataTransformation
+
 
 
 
@@ -46,4 +46,4 @@ class DataIngestion:
         return self.config.train_data_file, self.config.test_data_file
         
 
-   
+

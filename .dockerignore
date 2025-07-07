@@ -1,0 +1,41 @@
+# Python cache dosyaları
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Jupyter notebook checkpoint'leri
+.ipynb_checkpoints/
+
+# Virtual environment klasörü
+venv/
+.env/
+.envrc
+
+# MacOS/Windows sistem dosyaları
+.DS_Store
+Thumbs.db
+
+data/
+
+
+# Git
+.git
+.gitignore
+
+# IDE/editor dosyaları
+.vscode/
+.idea/
+
+# Veriler / modeller / loglar (isteğe bağlı)
+# mlruns/
+# logs/
+# *.log
+# *.csv
+# *.pkl
+# *.joblib
+# *.h5
+# *.db
+
+# Docker artefact'ları (build cache)
+Dockerfile~
+docker-compose.yml~
