@@ -135,7 +135,8 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.data
+mlops-end-to-end/data/
+mlops-end-to-end/artifacts/
 .env
 .envrc
 .venv
