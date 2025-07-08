@@ -8,5 +8,6 @@ fastapi
 uvicorn
 joblib
 dotenv
+gradio
 
 
