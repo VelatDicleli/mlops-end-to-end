@@ -29,4 +29,4 @@ jobs:
           context: .
           file: ./dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/fastapi-app:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/mlops-app:latest
