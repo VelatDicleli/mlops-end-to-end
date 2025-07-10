@@ -78,7 +78,7 @@ class ModelTrainer:
                 else:
                     # mlflow.sklearn.log_model(model, artifact_path="model", registered_model_name=registered_name)
                     mlflow.log_artifact(self.config.model_file_path, artifact_path="model")
-                    mlflow.reg
+                    
 
                 if test_r2 > best_model_score:
                     best_model_score = test_r2

@@ -16,13 +16,16 @@ app.add_middleware(
 )
 
 
+prediction_pipeline = PredictPipeline(
+    preprocessor_path="artifacts/preprocessor.pkl",
+    model_path="artifacts/model.pkl"
+)
+
+
 @app.post("/predict")
 def predict(request: CustomData):
     
-    prediction_pipeline = PredictPipeline(
-        preprocessor_path="artifacts/preprocessor.pkl",
-        model_path="artifacts/model.pkl"
-    )
+
     
     features = request.get_features()
     prediction = prediction_pipeline.predict(features)
